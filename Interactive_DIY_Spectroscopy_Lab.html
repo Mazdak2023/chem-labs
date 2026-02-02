@@ -890,28 +890,12 @@
                 </div>
             </div>
 
-            <div class="safety-box">
-                <h3>SAFETY PRECAUTIONS</h3>
-                <ul>
-                    <li><strong>Grape juice stains fabric permanently!</strong> Wear a lab coat or old clothes; clean spills immediately</li>
-                    <li><strong>No eating or drinking</strong> - lab solutions are not for consumption</li>
-                    <li><strong>Handle glassware carefully</strong> - report any broken glass to your instructor</li>
-                    <li><strong>Keep electronics dry</strong> - water damage to phones is your responsibility</li>
-                    <li><strong>Scissors safety</strong> - always cut away from your body when constructing the box</li>
-                    <li><strong>Clean your workspace</strong> thoroughly at the end of the experiment</li>
-                </ul>
-            </div>
-
-            <h3>Recommended RGB Apps</h3>
-            <div class="info-box">
-                <div class="info-box-title">SMARTPHONE COLOR ANALYZER APPS</div>
-                <p>Download one of these apps before coming to lab:</p>
-                <ul>
-                    <li><strong>Carolina RGB Colorimeter</strong> (iOS) - Recommended</li>
-                    <li><strong>Color Grab</strong> (Android/iOS)</li>
-                    <li><strong>RGB Color Detector</strong> (Android)</li>
-                </ul>
-                <p style="margin-top: 15px;">These apps display real-time RGB values from your phone's camera, allowing us to measure light intensity passing through our samples.</p>
+            <h3>Required App</h3>
+            <div class="info-box highlight">
+                <div class="info-box-title">CAROLINA RGB COLORIMETER</div>
+                <p>Download this app before coming to lab:</p>
+                <p style="margin: 15px 0;"><a href="https://apps.apple.com/app/carolina-rgb-colorimeter/id6445908681" target="_blank" style="color: #7c3aed; font-weight: 600;">Carolina RGB Colorimeter (iOS)</a></p>
+                <p>This app displays real-time RGB values from your phone's camera, allowing us to measure light intensity passing through our samples.</p>
             </div>
         </div>
 
@@ -924,7 +908,7 @@
             <div class="procedure-step">
                 <div class="step-number">1</div>
                 <div class="step-content">
-                    <strong>Select your box:</strong> Choose a cardboard box that can fit your cuvette or test tube standing upright inside. The box should be approximately 15-20 cm long.
+                    <strong>Get your box:</strong> Use the small cardboard box provided. It's the perfect size to fit a cuvette or test tube standing upright inside.
                 </div>
             </div>
 
@@ -1262,27 +1246,19 @@ Absorbance: A = -log₁₀(T) = -log₁₀(_____) = _____"></textarea>
 
             <div class="graph-container">
                 <canvas id="calibration-chart" height="400"></canvas>
-                <div class="graph-stats">
-                    <div class="stat-box">
-                        <div class="stat-label">SLOPE (\(m\))</div>
-                        <div class="stat-value" id="slope-value">--</div>
+                <div style="display: flex; justify-content: center; gap: 40px; margin-top: 20px;">
+                    <div class="stat-box" style="flex: 0 0 auto; min-width: 200px;">
+                        <div class="stat-label">Line Equation</div>
+                        <div class="stat-value" style="font-size: 1.1em;">\(A =\) <span id="eq-slope">m</span> \(\cdot C +\) <span id="eq-intercept">b</span></div>
                     </div>
-                    <div class="stat-box">
-                        <div class="stat-label">Y-INTERCEPT (\(b\))</div>
-                        <div class="stat-value" id="intercept-value">--</div>
-                    </div>
-                    <div class="stat-box">
+                    <div class="stat-box" style="flex: 0 0 auto; min-width: 120px;">
                         <div class="stat-label">\(R^2\)</div>
                         <div class="stat-value" id="r2-value">--</div>
                     </div>
                 </div>
-            </div>
-
-            <div class="info-box">
-                <div class="info-box-title">LINE EQUATION</div>
-                <p style="font-size: 1.3em; text-align: center; margin: 15px 0;">
-                    \(A =\) <span id="eq-slope">m</span> \(\cdot C +\) <span id="eq-intercept">b</span>
-                </p>
+                <!-- Hidden elements for JS compatibility -->
+                <span id="slope-value" style="display:none;">--</span>
+                <span id="intercept-value" style="display:none;">--</span>
             </div>
 
             <h3>Determining Unknown Concentration</h3>
@@ -1659,11 +1635,9 @@ Absorbance: A = -log₁₀(T) = -log₁₀(_____) = _____"></textarea>
             </div>
 
             <div class="info-box highlight">
-                <div class="info-box-title">CALIBRATION CURVE STATISTICS</div>
-                <p><strong>Slope (\(m\)):</strong> 0.00497 A/% (approximately 0.005)</p>
-                <p><strong>Y-intercept (\(b\)):</strong> 0.0032 (approximately 0)</p>
-                <p><strong>Equation:</strong> \(A = 0.00497 \cdot C + 0.0032\)</p>
-                <p><strong>R-squared (\(R^2\)):</strong> 0.998</p>
+                <div class="info-box-title">CALIBRATION CURVE</div>
+                <p><strong>Equation:</strong> \(A = 0.005 \cdot C\)</p>
+                <p><strong>\(R^2\):</strong> 0.998</p>
             </div>
 
             <div class="info-box">
