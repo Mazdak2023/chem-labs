@@ -2026,6 +2026,7 @@ Absorbance: A = -log₁₀(T) = -log₁₀(_____) = _____"></textarea>
                 ssTot += (point.y - meanY) ** 2;
                 ssRes += (point.y - (slope * point.x + intercept)) ** 2;
             });
+            
             const r2 = 1 - (ssRes / ssTot);
 
             return { slope, intercept, r2 };
